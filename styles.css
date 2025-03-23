@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 1rem;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#searchInput {
+  width: calc(100% - 1.5rem);
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+#searchInput:focus {
+  outline: 2px solid #ffa500; /* Orange outline for focus */
+  outline-offset: -2px; /* Prevents double border */
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.categories button {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+/* Light Theme */
+body:not(.dark-theme) .categories button {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text */
+}
+
+body:not(.dark-theme) .categories button:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+body:not(.dark-theme) .categories button:active,
+body:not(.dark-theme) .categories button:focus {
+  background-color: #007bff; /* Blue background for active/focus state */
+  color: #fff; /* White text for active/focus state */
+}
+
+/* Dark Theme */
+body.dark-theme .categories button {
+  background-color: #444; /* Dark gray background */
+  color: #fff; /* White text */
+}
+
+body.dark-theme .categories button:hover {
+  background-color: #555; /* Slightly lighter gray on hover */
+}
+
+body.dark-theme .categories button:active,
+body.dark-theme .categories button:focus {
+  background-color: #007bff; /* Blue background for active/focus state */
+  color: #fff; /* White text for active/focus state */
+}
+
+#results {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.result-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+.result-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme #searchInput {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark-theme #searchInput:focus {
+  outline: 2px solid #ffa500; /* Orange outline for focus in dark theme */
+}
+
+body.dark-theme .result-item {
+  border-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .result-item:hover {
+  background-color: #333;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .categories button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}  }
+}
